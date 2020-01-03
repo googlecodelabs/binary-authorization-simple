@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {CONTAINER_NAME}-break-glass
+  labels:
+    app: {CONTAINER_NAME}-break-glass
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {CONTAINER_NAME}-break-glass
+  template:
+    metadata:
+      labels:
+        app: {CONTAINER_NAME}-break-glass
+      annotations:
+        alpha.image-policy.k8s.io/break-glass: "true"
+    spec:
+      containers:
+      - name: {CONTAINER_NAME}-break-glass
+        image: {CONTAINER_PATH}
+        ports:
+        - containerPort: 80

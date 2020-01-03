@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-world-signed
+  labels:
+    app: hello-world-signed
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hello-world-signed
+  template:
+    metadata:
+      labels:
+        app: hello-world-signed
+    spec:
+      containers:
+      - name: hello-world-signed
+        image: us.gcr.io/wings-verbanicm/hello-world@sha256:b69790a093807ac3fd5339bf4260c96b4c1aa36c215ab51840b581a5578bf179
+        ports:
+        - containerPort: 80

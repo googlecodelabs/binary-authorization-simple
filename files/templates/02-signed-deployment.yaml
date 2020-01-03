@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {CONTAINER_NAME}-signed
+  labels:
+    app: {CONTAINER_NAME}-signed
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {CONTAINER_NAME}-signed
+  template:
+    metadata:
+      labels:
+        app: {CONTAINER_NAME}-signed
+    spec:
+      containers:
+      - name: {CONTAINER_NAME}-signed
+        image: {CONTAINER_PATH}@{DIGEST}
+        ports:
+        - containerPort: 80

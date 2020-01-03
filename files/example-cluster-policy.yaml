@@ -1,0 +1,21 @@
+admissionWhitelistPatterns:
+- namePattern: docker.io/istio/*
+defaultAdmissionRule:
+  enforcementMode: ENFORCED_BLOCK_AND_AUDIT_LOG
+  evaluationMode: ALWAYS_DENY
+globalPolicyEvaluationMode: ENABLE
+clusterAdmissionRules:
+  # Staging cluster
+  ${REGION}.staging-cluster:
+    evaluationMode: REQUIRE_ATTESTATION
+    enforcementMode: ENFORCED_BLOCK_AND_AUDIT_LOG
+    requireAttestationsBy:
+    - projects/${PROJECT_ID}/attestors/vulnz-attestor
+
+  # Production cluster
+  ${REGION}.prod-cluster:
+    evaluationMode: REQUIRE_ATTESTATION
+    enforcementMode: ENFORCED_BLOCK_AND_AUDIT_LOG
+    requireAttestationsBy:
+    - projects/${PROJECT_ID}/attestors/vulnz-attestor
+    - projects/${PROJECT_ID}/attestors/qa-attestor
