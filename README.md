@@ -2,6 +2,10 @@
 
 ### Scripts can be executed in sequential order, see example flow below
 
+### Update variables in `vars.sh` for customization
+
+### Example Flow
+
 ```
 # Enable APIs and create deploy files from templates
 ./01-setup.sh
