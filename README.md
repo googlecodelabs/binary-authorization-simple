@@ -1,6 +1,6 @@
 # Binary Authorization Demo
 
-### Execute the scripts in sequential order using the `source` command since we are setting variables through bash script
+### Scripts can be executed in sequential order, see example flow below
 
 ```
 # Enable APIs and create deploy files from templates
@@ -57,8 +57,7 @@ kubectl get pods
 
 # To cleanup the project use this command
 ./cleanup-project.sh
-
 ```
 
 ### See Codelab for supporting documentation:
-### https://codelabs.developers.google.com/codelabs/cloud-binauthz-intro/index.html?index=..%2F..index#0
+### https://codelabs.developers.google.com/codelabs/cloud-binauthz-intro/index.html
