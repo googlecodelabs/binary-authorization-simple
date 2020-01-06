@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: hello-world-signed
-        image: us.gcr.io/wings-verbanicm/hello-world@sha256:b69790a093807ac3fd5339bf4260c96b4c1aa36c215ab51840b581a5578bf179
+        image: us.gcr.io/wings-verbanicm/hello-world@sha256:dd4fbaca12ace3607361e55bbaa8cb25bdb7523702be91b01985963440d7ac39
         ports:
         - containerPort: 80

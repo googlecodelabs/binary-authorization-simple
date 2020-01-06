@@ -51,7 +51,7 @@ curl "https://containeranalysis.googleapis.com/v1beta1/projects/${GOOGLE_CLOUD_P
   --header "X-Goog-User-Project: ${GOOGLE_CLOUD_PROJECT}" \
   --data-binary @- <<EOF
     {
-      "resource": "projects/${GOOGLE_CLOUD_PROJECT}/notes/",
+      "resource": "projects/${GOOGLE_CLOUD_PROJECT}/notes/${NOTE_ID}",
       "policy": {
         "bindings": [{
           "role": "roles/containeranalysis.notes.occurrences.viewer",

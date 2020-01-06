@@ -3,7 +3,7 @@
 export CLUSTER_NAME=binauthz-cluster
 
 # Set the default region
-export ZONE=us-central1
+export ZONE=us-central1-a
 
 # Set the container name
 export CONTAINER_NAME=hello-world

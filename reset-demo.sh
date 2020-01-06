@@ -14,3 +14,10 @@ curl -vvv -X DELETE  \
     "https://containeranalysis.googleapis.com/v1/projects/${GOOGLE_CLOUD_PROJECT}/notes/${NOTE_ID}"
 
 gcloud container binauthz policy import files/allow_all_policy.yaml
+
+# Move template files into dir
+cp ./files/templates/02-signed-deployment.yaml ./files/02-signed-deployment.yaml
+
+# Update environment variables
+sed -i "s/{CONTAINER_NAME}/$CONTAINER_NAME/g" "./files/02-signed-deployment.yaml"
+sed -i "s~{CONTAINER_PATH}~$CONTAINER_PATH~g" "./files/02-signed-deployment.yaml"
