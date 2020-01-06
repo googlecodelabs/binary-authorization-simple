@@ -1,5 +1,5 @@
-./files/01-deployment.yaml
-./files/02-signed-deployment.yaml
-./files/03-break-glass-deployment.yaml
-./files/updated_policy.yaml
+files/01-deployment.yaml
+files/02-signed-deployment.yaml
+files/03-break-glass-deployment.yaml
+files/updated_policy.yaml
 
