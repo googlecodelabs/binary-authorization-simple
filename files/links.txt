@@ -1,3 +1,0 @@
-https://console.cloud.google.com/security/binary-authorization/attestors
-
-https://console.cloud.google.com/security/kms

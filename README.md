@@ -1,5 +1,7 @@
 # Binary Authorization Demo
 
+## NOTE: This is not an officially supported Google product
+
 ### Scripts can be executed in sequential order, see example flow below
 
 ### Update variables in `vars.sh` for customization
