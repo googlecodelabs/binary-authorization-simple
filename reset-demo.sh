@@ -5,7 +5,7 @@ source ./vars.sh
 kubectl delete deployment --all
 kubectl delete event --all
 
-gcloud container images delete $CONTAINER_PATH --force-delete-tags
+gcloud container images delete $CONTAINER_PATH --force-delete-tags --quiet
 
 gcloud container binauthz attestors delete $ATTESTOR_ID
 

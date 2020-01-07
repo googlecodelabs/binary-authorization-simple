@@ -4,7 +4,7 @@ source ./vars.sh
 
 gcloud container clusters delete $CLUSTER_NAME --zone $ZONE
 
-gcloud container images delete $CONTAINER_PATH --force-delete-tags
+gcloud container images delete $CONTAINER_PATH --force-delete-tags --quiet
 
 gcloud container binauthz attestors delete $ATTESTOR_ID
 
