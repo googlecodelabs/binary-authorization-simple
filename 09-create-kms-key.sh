@@ -30,7 +30,7 @@ gcloud kms keys create "${KEY_NAME}" \
   --default-algorithm "ec-sign-p256-sha256"
 
 # Add public key to the attestory
-gcloud beta container binauthz attestors public-keys add \
+gcloud container binauthz attestors public-keys add \
   --project "${GOOGLE_CLOUD_PROJECT}" \
   --attestor "${ATTESTOR_ID}"  \
   --keyversion "${KEY_VERSION}" \

@@ -21,7 +21,7 @@ DIGEST=$(gcloud container images describe ${CONTAINER_PATH}:latest \
     --format='get(image_summary.digest)')
 
 # Sign and create attestation for container
-gcloud beta container binauthz attestations sign-and-create  \
+gcloud container binauthz attestations sign-and-create  \
     --artifact-url="${CONTAINER_PATH}@${DIGEST}" \
     --attestor="${ATTESTOR_ID}" \
     --attestor-project="${GOOGLE_CLOUD_PROJECT}" \

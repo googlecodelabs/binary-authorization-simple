@@ -58,7 +58,7 @@ gcloud container binauthz attestors list
 
 
 # Set IAM Permissions for Note
-curl "https://containeranalysis.googleapis.com/v1beta1/projects/${GOOGLE_CLOUD_PROJECT}/notes/${NOTE_ID}:setIamPolicy" \
+curl "https://containeranalysis.googleapis.com/v1/projects/${GOOGLE_CLOUD_PROJECT}/notes/${NOTE_ID}:setIamPolicy" \
   --request POST \
   --header "Content-Type: application/json" \
   --header "Authorization: Bearer $(gcloud auth print-access-token)" \
